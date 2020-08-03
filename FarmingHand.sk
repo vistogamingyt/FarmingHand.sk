@@ -1,0 +1,77 @@
+
+#!
+#!  Please do not edit this skript unless you know what you are doing!
+#!   (You may edit the options below!)
+#!
+#!  If you encounter any issues please reach out and let me know and
+#!   I will do my best to fix them!
+#!
+#!  This skript was coded by VistoGamingYT - Discord: VistoGamingYT#6581
+#!    If used or edited give credit where credit is due please and
+#!      thank you :)
+#!
+
+options:
+  perm: harvest.rtclick #! Permisson needed to harvest using right-click
+  double: 36 #! Percent chance to get 1 extra crop upon harvest
+  triple: 18 #! Percent chance to get 2 extra crop upon harvest
+
+on right click:
+  if event-block is ripe wheat plant:
+    if player has permission "{@perm}":
+      play sound "ENTITY_HORSE_SADDLE" with volume 0.05 at pitch 4 to the player
+      set {_block} to freshly planted wheat plant
+      set data value of {_block} to 1
+      set event-block to {_block}
+      give player 1 wheat
+      chance of 36:
+        give player 1 wheat seed
+      chance of 18:
+        give player 1 wheat
+        give player 1 wheat seed
+      remove 1 wheat seed from the inventory of player
+    else:
+      send "&cYou dont have permisson to do this!"
+  if event-block is ripe carrot plant:
+    if player has permission "{@perm}":
+      play sound "ENTITY_HORSE_SADDLE" with volume 0.05 at pitch 4 to the player
+      set {_block} to freshly planted carrot plant
+      set data value of {_block} to 1
+      set event-block to {_block}
+      give player 1 carrot
+      chance of 36:
+        give player 1 carrot
+      chance of 18:
+        give player 1 carrot
+      remove 1 carrot from the inventory of player
+    else:
+      send "&cYou dont have permisson to do this!"
+  if event-block is ripe potato plant:
+    if player has permission "{@perm}":
+      play sound "ENTITY_HORSE_SADDLE" with volume 0.05 at pitch 4 to the player
+      set {_block} to freshly planted potato plant
+      set data value of {_block} to 1
+      set event-block to {_block}
+      give player 1 potato
+      chance of 50:
+        give player 1 potato
+      chance of 20:
+        give player 1 potato
+      remove 1 potato from the inventory of player
+    else:
+      send "&cYou dont have permisson to do this!"
+  if event-block is ripe beetroot plant:
+    if player has permission "{@perm}":
+      play sound "ENTITY_HORSE_SADDLE" with volume 0.05 at pitch 4 to the player
+      set {_block} to freshly planted beetroot plant
+      set data value of {_block} to 1
+      set event-block to {_block}
+      give player 1 beetroot
+      chance of 36:
+        give player 1 beetroot seed
+      chance of 18:
+        give player 1 beetroot
+        give player 1 beetroot seed
+      remove 1 beetroot seed from the inventory of player
+    else:
+      send "&cYou dont have permisson to do this!"
